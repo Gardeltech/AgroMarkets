@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto Final</title>
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css" />-->
+  </head>
+  <body>
+    <!-- Encabezado -->
+    <header>
+      <div class="container">
+        <h1>AgroMarket</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="suscripcion.html">Suscripción</a></li>
+          </ul>
+        </nav>
+        <!-- Barra de Búsqueda -->
+        <div class="busqueda">
+          <input
+            type="text"
+            id="barra-busqueda"
+            placeholder="Buscar productos..."
+          />
+          <button id="boton-buscar">Buscar</button>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <!-- Sección de Inicio -->
+      <section id="inicio">
+        <div class="container">
+          <h2>
+            <img class="container-titulo" src="img/AgroMarket.gif" alt="" />
+          </h2>
+        </div>
+      </section>
+
+      <!-- Seccion de caracteristicas de producto-->
+      <section class="contenido-interno">
+        <div class="contenido-alimentos" id="lista-alimentos"></div>
+
+        <div class="contenido-descripcion">
+          <p id="nombre" class="centrar-contenido-nombre"></p>
+
+          <p id="id" class="centrar-contenido"></p>
+          <p id="familia" class="centrar-contenido"></p>
+          <p id="genero" class="centrar-contenido"></p>
+          <p id="valores_nutritivos" class="centrar-contenido"></p>
+          <p id="calorias" class="centrar-contenido"></p>
+          <p id="azucares" class="centrar-contenido"></p>
+          <p id="carbohidratos" class="centrar-contenido"></p>
+          <p id="descripcion" class="centrar-contenido"></p>
+        </div>
+
+        <section class="content-imagen"></section>
+      </section>
+    </main>
+
+    <!-- Carrito de Compras -->
+    <div class="carrito" id="carrito">
+      <h2>Carrito de Compras</h2>
+      <ul id="lista-carrito">
+        <!-- Items del carrito se agregarán aquí -->
+      </ul>
+      <p><strong>Total:</strong> €<span id="total-carrito">0.00</span></p>
+      <!-- Formulario de Checkout -->
+      <div id="checkout" class="hidden">
+        <h3>Datos de Envío</h3>
+        <form id="form-checkout">
+          <input
+            type="text"
+            id="nombre"
+            placeholder="Nombre Completo"
+            required
+          />
+          <input type="text" id="direccion" placeholder="Dirección" required />
+          <input type="tel" id="telefono" placeholder="Teléfono" required />
+          <label for="forma-pago">Forma de Pago:</label>
+          <select id="forma-pago" required>
+            <option value="">Selecciona</option>
+            <option value="Tarjeta de Crédito">Tarjeta de Crédito</option>
+            <option value="PayPal">PayPal</option>
+            <option value="Transferencia Bancaria">
+              Transferencia Bancaria
+            </option>
+          </select>
+          <button type="submit">Confirmar Pedido</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Video -->
+    <section class="container-video">
+      <video src="vid/agrovideo.mp4" controls autoplay loop></video>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>AgroMarket &copy; 2024. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    <!--scrips java-->
+    <script src="js/datos.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

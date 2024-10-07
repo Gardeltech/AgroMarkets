@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto Final</title>
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css" />-->
+  </head>
+  <body>
+    <!-- Encabezado -->
+    <header>
+      <div class="container">
+        <h1>AgroMarket</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="suscripcion.html">Suscripción</a></li>
+          </ul>
+        </nav>
+        <!-- Barra de Búsqueda -->
+        <div class="busqueda">
+          <input
+            type="text"
+            id="barra-busqueda"
+            placeholder="Buscar productos..."
+          />
+          <button id="boton-buscar">Buscar</button>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <!-- Sección de Inicio -->
+      <section id="inicio">
+        <div class="container">
+          <h2>
+            <img class="container-titulo" src="img/AgroMarket.gif" alt="" />
+          </h2>
+          <p>
+            Ofrecemos las frutas y verduras más frescas directamente de
+            productores locales.
+          </p>
+
+          <section class="container1">
+            <p class="containerp1">
+              AgroMarket se posiciona como el líder en la comercialización de
+              frutas y verduras frescas, promoviendo una alimentación saludable
+              y sostenible. Nuestra visión es ser reconocidos como el proveedor
+              preferido por los consumidores y empresas, destacando por la
+              calidad de nuestros productos y el compromiso con el medio
+              ambiente.
+            </p>
+            <img class="container-mercado" src="img/mercado.jpg" alt="" />
+            <br />
+          </section>
+
+          <section class="container2">
+            <p class="containerp2">
+              Nuestra misión es ofrecer frutas y verduras de la más alta
+              calidad, cultivadas de manera sostenible y responsables con el
+              medio ambiente. Nos esforzamos por conectar a los agricultores
+              locales con los consumidores, garantizando frescura, sabor y
+              nutrición en cada producto que ofrecemos.
+            </p>
+            <img class="container-agricultor" src="img/agricultor.jpg" alt="" />
+            <br />
+          </section>
+
+          <section class="container3">
+            <p class="containerp3">
+              Fomentamos prácticas agrícolas responsables y sostenibles,
+              apoyando a los agricultores locales y minimizando el impacto
+              ambiental. Nos comprometemos a ofrecer productos frescos, de alta
+              calidad y seleccionados cuidadosamente para satisfacer las
+              necesidades de nuestros clientes. Mantenemos una comunicación
+              abierta y honesta con nuestros proveedores y consumidores,
+              garantizando la trazabilidad de nuestros productos y buscamos
+              constantemente nuevas formas de mejorar nuestros procesos y
+              servicios para ofrecer la mejor experiencia al cliente.
+            </p>
+            <img
+              class="container-practica-agricola"
+              src="img/pactica-agricola.jpg"
+              alt=""
+            />
+            <br />
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <!-- Carrito de Compras -->
+    <div class="carrito" id="carrito">
+      <h2>Carrito de Compras</h2>
+      <ul id="lista-carrito">
+        <!-- Items del carrito se agregarán aquí -->
+      </ul>
+      <p><strong>Total:</strong> €<span id="total-carrito">0.00</span></p>
+      <!-- Formulario de Checkout -->
+      <div id="checkout" class="hidden">
+        <h3>Datos de Envío</h3>
+        <form id="form-checkout">
+          <input
+            type="text"
+            id="nombre"
+            placeholder="Nombre Completo"
+            required
+          />
+          <input type="text" id="direccion" placeholder="Dirección" required />
+          <input type="tel" id="telefono" placeholder="Teléfono" required />
+          <label for="forma-pago">Forma de Pago:</label>
+          <select id="forma-pago" required>
+            <option value="">Selecciona</option>
+            <option value="Tarjeta de Crédito">Tarjeta de Crédito</option>
+            <option value="PayPal">PayPal</option>
+            <option value="Transferencia Bancaria">
+              Transferencia Bancaria
+            </option>
+          </select>
+          <button type="submit">Confirmar Pedido</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal de Acceso de Administrador -->
+    <div id="modal-admin" class="modal hidden">
+      <div class="modal-content">
+        <span class="cerrar">&times;</span>
+        <h2>Acceso de Administrador</h2>
+        <form id="form-admin">
+          <input
+            type="text"
+            id="admin-usuario"
+            placeholder="Usuario"
+            required
+          />
+          <input
+            type="password"
+            id="admin-password"
+            placeholder="Contraseña"
+            required
+          />
+          <button type="submit">Acceder</button>
+        </form>
+        <div id="panel-admin" class="hidden">
+          <h3>Panel de Administración</h3>
+          <h4>Suscriptores</h4>
+          <ul id="lista-suscriptores">
+            <!-- Suscriptores se listarán aquí -->
+          </ul>
+          <h4>Pedidos</h4>
+          <ul id="lista-pedidos">
+            <!-- Pedidos se listarán aquí -->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <section class="container-video">
+      <video src="vid/agrovideo.mp4" controls loop autoplay></video>
+    </section>
+    <!-- Pie de Página -->
+    <footer>
+      <div class="container">
+        <p>AgroMarket &copy; 2024. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <!-- Enlace al archivo JavaScript externo -->
+
+    <script src="js/datos.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

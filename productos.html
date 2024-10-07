@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto final</title>
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+  </head>
+  <body>
+    <!-- Encabezado -->
+    <header>
+      <div class="container">
+        <h1>AgroMarket</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="suscripcion.html">Suscripción</a></li>
+          </ul>
+        </nav>
+        <!-- Barra de Búsqueda -->
+        <div class="busqueda">
+          <input
+            type="text"
+            id="barra-busqueda"
+            placeholder="Buscar productos..."
+          />
+          <button id="boton-buscar">Buscar</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sección de Productos -->
+    <section id="productos">
+      <div class="container">
+        <!-- Titulo animado-->
+        <div class="container">
+          <h2>
+            <img class="container-titulo" src="img/AgroMarket.gif" alt="" />
+          </h2>
+        </div>
+
+        <h2>Productos</h2>
+        <div class="productos" id="lista-productos">
+          <!-- Producto 1 -->
+          <div class="producto" data-nombre="Manzanas">
+            <img
+              id="imgInfo"
+              src="img/manzana.jpg"
+              alt="Manzanas"
+              data-id="1"
+            />
+
+            <h3>Manzanas</h3>
+            <p>€2.00 / kg</p>
+            <button
+              class="boton-agregar"
+              data-producto="Manzanas"
+              data-precio="2.00"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+
+          <!-- Producto 2 -->
+          <div class="producto" data-nombre="Plátanos">
+            <img
+              id="imgInfo"
+              src="img/platano.jpg"
+              alt="Plátanos"
+              data-id="2"
+            />
+
+            <h3>Plátanos</h3>
+            <p>€1.50 / kg</p>
+            <button
+              class="boton-agregar"
+              data-producto="Plátanos"
+              data-precio="1.50"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+          <!-- Producto 3 -->
+          <div class="producto" data-nombre="Zanahorias">
+            <a href="info.html">
+              <img src="img/zanahoria.jpg" alt="Zanahorias" />
+            </a>
+
+            <h3>Zanahorias</h3>
+            <p>€1.00 / kg</p>
+            <button
+              class="boton-agregar"
+              data-producto="Zanahorias"
+              data-precio="1.00"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+
+          <!-- Producto 4 -->
+          <div class="producto" data-nombre="Kiwi">
+            <a href="info.html">
+              <img src="img/Kiwi.jpg" alt="Kiwi" />
+            </a>
+
+            <h3>Kiwi</h3>
+            <p>€1.00 / kg</p>
+            <button
+              class="boton-agregar"
+              data-producto="Kiwi"
+              data-precio="1.00"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+
+          <!-- Producto 5 -->
+          <div class="producto" data-nombre="Brocoli">
+            <a href="info.html">
+              <img src="img/brocoli.jpg" alt="Brocoli" />
+            </a>
+
+            <h3>Brócoli</h3>
+            <p>€1.59 / kg</p>
+            <button
+              class="boton-agregar"
+              data-producto="Brocoli"
+              data-precio="1.59"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+
+          <!-- Producto 6 -->
+          <div class="producto" data-nombre="Espinaca">
+            <a href="info.html">
+              <img src="img/espinaca.jpg" alt="Espinaca" />
+            </a>
+
+            <h3>Espinaca</h3>
+            <p>€1.59 / kg</p>
+            <button
+              class="boton-agregar"
+              data-producto="Espinaca"
+              data-precio="1.59"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+
+          <!-- Puedes agregar más productos aquí -->
+        </div>
+      </div>
+    </section>
+    <!-- Carrito de Compras -->
+    <div class="carrito" id="carrito">
+      <h2>Carrito de Compras</h2>
+      <ul id="lista-carrito">
+        <!-- Items del carrito se agregarán aquí -->
+      </ul>
+      <p><strong>Total:</strong> $<span id="total-carrito">0.00</span></p>
+      <!-- Formulario de Checkout -->
+      <div id="checkout" class="hidden">
+        <h3>Datos de Envío</h3>
+        <form id="form-checkout">
+          <input
+            type="text"
+            id="nombre"
+            placeholder="Nombre Completo"
+            required
+          />
+          <input type="text" id="direccion" placeholder="Dirección" required />
+          <input type="tel" id="telefono" placeholder="Teléfono" required />
+          <label for="forma-pago">Forma de Pago:</label>
+          <select id="forma-pago" required>
+            <option value="">Selecciona</option>
+            <option value="Tarjeta de Crédito">Tarjeta de Crédito</option>
+            <option value="PayPal">PayPal</option>
+            <option value="Transferencia Bancaria">
+              Transferencia Bancaria
+            </option>
+          </select>
+          <button type="submit">Confirmar Pedido</button>
+        </form>
+      </div>
+    </div>
+
+    <section class="container-video">
+      <video src="vid/agrovideo.mp4" controls autoplay loop></video>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+      <div class="container">
+        <p>AgroMarket &copy; 2024. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <!-- Enlace al archivo JavaScript externo -->
+    <script src="js/datos.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto final</title>
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css" />-->
+  </head>
+  <body>
+    <!-- Encabezado -->
+    <header>
+      <div class="container">
+        <h1>AgroMarket</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="suscripcion.html">Suscripción</a></li>
+          </ul>
+        </nav>
+        <!-- Barra de Búsqueda -->
+        <div class="busqueda">
+          <input
+            type="text"
+            id="barra-busqueda"
+            placeholder="Buscar productos..."
+          />
+          <button id="boton-buscar">Buscar</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sección Suscripción -->
+    <section id="suscripcion">
+      <div class="container">
+        <!-- Titulo animado-->
+        <div class="container">
+          <h2>
+            <img class="container-titulo" src="img/AgroMarket.gif" alt="" />
+          </h2>
+        </div>
+        <h2>Suscripción</h2>
+        <p>
+          Suscríbete a nuestro boletín para recibir ofertas y novedades
+          directamente en tu correo electrónico.
+        </p>
+        <form class="suscripcion" id="form-suscripcion">
+          <input
+            type="email"
+            id="email"
+            placeholder="Tu correo electrónico"
+            required
+          />
+          <button type="submit">Suscribirse</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="container-video">
+      <video src="vid/agrovideo.mp4" controls autoplay loop></video>
+    </section>
+    <footer>
+      <div class="container">
+        <p>AgroMarket &copy; 2024. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <!-- Enlace al archivo JavaScript externo -->
+    <script src="js/datos.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
