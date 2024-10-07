@@ -481,7 +481,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <p>${nosotros.mision}.</p> `;
 
         infoNosotros.appendChild(pNosotros);
-        infoNosotros.appendChild(titNosotros);
+        infNosotros.appendChild(titNosotros);
         infNosotros.appendChild(desNosotros);
       }
     });
