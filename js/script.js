@@ -398,7 +398,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function mostrarProductos(productos) {
     console.log(productos[0].nombre);
-    const listar = document.createElement("lista-productos");
+    const listar = document.getElementById("lista-productos");
     productos.forEach((producto) => {
       // Crear elementos HTML
 
