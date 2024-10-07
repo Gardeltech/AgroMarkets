@@ -459,8 +459,8 @@ console.log(imgInfo);
 imgInfo.addEventListener("click", (ev) => {
   console.log(ev);
 
-  const userId = ev.target.getAttribute("data-id");
+  const alimentoId = ev.target.getAttribute("data-id");
   console.log(userId);
-  localStorage.setItem("alimento", userId);
+  localStorage.setItem("alimento", alimentoId);
   window.location.href = "info.html"; //redirecciono a la página de info.html con el id del usuario en el local storage
 });
