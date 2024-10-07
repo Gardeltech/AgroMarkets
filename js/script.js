@@ -451,6 +451,41 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     return listar;
   }
+
+  mostrarNosotros(sobreNosotros);
+  console.log(mostrarNosotros(sobreNosotros));
+
+  function mostrarNosotros(nosotross) {
+    const infoNosotros = document.getElementById("sobre-nosotros");
+
+    nosotross.forEach((nosotros) => {
+      //recuperar datos de localstorage
+      const idNosotros = localStorage.getItem("nosotros");
+      console.log(idNosotros);
+
+      if (parseInt(idNosotros) === nosotros.id) {
+        // Crear elementos HTML
+        const pNosotros = document.createElement("p");
+        pNosotros.classList.add("nosotros");
+
+        const titNosotros = document.createElement("h2");
+        titNosotros.textContent = nosotros.titulo;
+
+        const desNosotros = document.createElement("p");
+        desNosotros.textContent = nosotros.mision;
+
+        const infNosotros = document.createElement("p");
+        infNosotros.innerHTML = `
+      <h2>${nosotros.titulo}</h2>
+      <br />
+      <p>${nosotros.mision}.</p> `;
+
+        infoNosotros.appendChild(pNosotros);
+        infoNosotros.appendChild(titNosotros);
+        infNosotros.appendChild(desNosotros);
+      }
+    });
+  }
 });
 
 const imgInfo = document.getElementById("imgInfo");
