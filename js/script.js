@@ -189,113 +189,6 @@ function asignarEventoCheckout() {
   formularioCheckout.addEventListener("submit", manejarCheckout);
 }
 
-/*// Función para abrir el modal de administrador
-function abrirModalAdmin() {
-  const modal = document.getElementById("modal-admin");
-  modal.classList.remove("hidden");
-}
-
-// Función para cerrar el modal de administrador
-function cerrarModalAdmin() {
-  const modal = document.getElementById("modal-admin");
-  modal.classList.add("hidden");
-  // Ocultar panel admin
-  const panelAdmin = document.getElementById("panel-admin");
-  panelAdmin.classList.add("hidden");
-  // Limpiar formulario admin
-  document.getElementById("form-admin").reset();
-}
-
-// Función para manejar el acceso de administrador
-function accederAdmin(event) {
-  event.preventDefault();
-  const usuario = document.getElementById("admin-usuario").value.trim();
-  const password = document.getElementById("admin-password").value.trim();
-
-  // Definir credenciales de administrador (Ejemplo simple)
-  const adminUsuario = "admin";
-  const adminPassword = "admin123";
-
-  if (usuario === adminUsuario && password === adminPassword) {
-    // Mostrar panel admin
-    const panelAdmin = document.getElementById("panel-admin");
-    panelAdmin.classList.remove("hidden");
-
-    // Cargar suscriptores
-    cargarSuscriptores();
-
-    // Cargar pedidos
-    cargarPedidos();
-  } else {
-    alert("Credenciales incorrectas.");
-  }
-}
-
-// Función para cargar suscriptores en el panel admin
-function cargarSuscriptores() {
-  const listaSuscriptores = document.getElementById("lista-suscriptores");
-  listaSuscriptores.innerHTML = "";
-  const suscriptores = JSON.parse(localStorage.getItem("suscriptores")) || [];
-  suscriptores.forEach((email) => {
-    const li = document.createElement("li");
-    li.textContent = email;
-    listaSuscriptores.appendChild(li);
-  });
-}
-
-// Función para cargar pedidos en el panel admin
-function cargarPedidos() {
-  const listaPedidos = document.getElementById("lista-pedidos");
-  listaPedidos.innerHTML = "";
-  pedidos.forEach((pedido, index) => {
-    const li = document.createElement("li");
-    li.innerHTML = `
-            <strong>Pedido #${index + 1}</strong><br>
-            Nombre: ${pedido.nombre}<br>
-            Dirección: ${pedido.direccion}<br>
-            Teléfono: ${pedido.telefono}<br>
-            Forma de Pago: ${pedido.formaPago}<br>
-            Productos:
-            <ul>
-                ${pedido.productos
-                  .map(
-                    (prod) =>
-                      `<li>${prod.producto} x${prod.cantidad} - $${(
-                        prod.precio * prod.cantidad
-                      ).toFixed(2)}</li>`
-                  )
-                  .join("")}
-            </ul>
-            Total: $${pedido.total}<br>
-            Fecha: ${pedido.fecha}
-        `;
-    listaPedidos.appendChild(li);
-  });
-}
-
-// Función para asignar eventos al modal de administrador
-function asignarEventosAdmin() {
-  // Botón para abrir el modal
-  const botonAdmin = document.getElementById("boton-admin");
-  botonAdmin.addEventListener("click", abrirModalAdmin);
-
-  // Botón para cerrar el modal
-  const cerrar = document.querySelector(".cerrar");
-  cerrar.addEventListener("click", cerrarModalAdmin);
-
-  // Manejar el formulario de administrador
-  const formularioAdmin = document.getElementById("form-admin");
-  formularioAdmin.addEventListener("submit", accederAdmin);
-
-  // Cerrar el modal al hacer clic fuera del contenido
-  window.addEventListener("click", function (event) {
-    const modal = document.getElementById("modal-admin");
-    if (event.target === modal) {
-      cerrarModalAdmin();
-    }
-  });
-}
-*/
 // Función para manejar el acceso al checkout
 function handleCarritoChange() {
   toggleCheckout();
@@ -391,7 +284,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-  /**Productos se mostraran en pantalla  */
+  /*Productos se mostraran en pantalla  */
 
   mostrarProductos(DatosAlimentos);
   console.log(mostrarProductos(DatosAlimentos));
@@ -417,6 +310,7 @@ document.addEventListener("DOMContentLoaded", function () {
               data-producto="${producto.nombre}"
               data-precio="${producto.precio}"
               data-id=${producto.id}
+              
               
             >
               Agregar al carrito
