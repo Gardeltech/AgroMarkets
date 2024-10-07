@@ -160,11 +160,3 @@ const DatosAlimentos = [
     imagen: "img/pimiento.jpg",
   },
 ];
-
-const sobreNosotros = [
-  {
-    titulo: "Sobre Nosotros",
-    mision:
-      "Bienvenido a AgroMarket, tu plataforma integral dedicada al mundo agrícola. Fundada con la misión de conectar a productores, proveedores y consumidores, AgroMarket nace de la pasión por el campo y el compromiso con la sostenibilidad. Somos una tienda comprometida con ofrecer productos frescos y de calidad, apoyando a productores locales y promoviendo una alimentación saludable. En AgroMarket, creemos que la agricultura es el corazón de nuestras comunidades. Nuestro objetivo es facilitar el acceso a productos agrícolas de calidad, promoviendo la compra y venta directa entre agricultores y consumidores. Queremos empoderar a los productores locales, dándoles las herramientas necesarias para prosperar en unmercado en constante evolución.",
-  },
-];
