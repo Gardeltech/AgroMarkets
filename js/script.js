@@ -92,11 +92,11 @@ function asignarEventosAgregar() {
   });
 }
 
-/*// Función para asignar evento al formulario de suscripción
+//Función para asignar evento al formulario de suscripción
 function asignarEventoSuscripcion() {
   const formulario = document.getElementById("form-suscripcion");
   formulario.addEventListener("submit", suscribirse);
-}*/
+}
 
 // Función para manejar la búsqueda de productos
 function buscarProductos() {
@@ -319,31 +319,7 @@ console.log(DatosAlimentos[0].nombre);
 
 document.addEventListener("DOMContentLoaded", function () {
   // Ruta al archivo JSON
-  //console.log(DatosAlimentos);
-
-  // Llenar la lista de alimentos
-  /*const alimentoNombre = document.getElementById("nombre");
-  console.log(alimentoNombre);
-  const alimentoId = document.getElementById("id");
-  console.log(alimentoId);
-  const alimentoFamilia = document.getElementById("familia");
-  console.log(alimentoFamilia);
-  const alimentoGenero = document.getElementById("genero");
-  console.log(alimentoGenero);
-  const alimentoValores = document.getElementById("valores_nutritivos");
-  console.log(alimentoValores);
-  const alimentoCalorias = document.getElementById("calorias");
-  console.log(alimentoCalorias);
-  const alimentoAzucares = document.getElementById("azucares");
-  console.log(alimentoAzucares);
-  const alimentoCarbohidratos = document.getElementById("carbohidratos");
-  console.log(alimentoCarbohidratos);
-  const alimentoProteinas = document.getElementById("proteinas");
-  console.log(alimentoProteinas);
-  const alimentoDescripcion = document.getElementById("descripcion");
-  console.log(alimentoDescripcion);
-  const alimentoImagen = document.getElementById("imagen");
-  console.log(alimentoImagen);*/
+  console.log(DatosAlimentos);
 
   mostrarAlimentos(DatosAlimentos);
 
@@ -447,6 +423,25 @@ document.addEventListener("DOMContentLoaded", function () {
             </button>
           </div>
 
+          <div class="producto" 
+          data-nombre="${producto.nombre}">
+            
+              <img src="${producto.imagen}" alt="${producto.nombre}" id="imgInfo" data-id="${producto.id}"/>
+        
+
+            <h3>${producto.nombre}</h3>
+            <p>€${producto.precio} / kg</p>
+            <button
+              class="boton-agregar"
+              data-producto="${producto.nombre}"
+              data-precio="${producto.precio}"
+              data-id=${producto.id}
+              
+            >
+              Agregar al carrito
+            </button>
+          </div>
+
 `;
     });
     return listar;
@@ -496,6 +491,7 @@ imgInfo.addEventListener("click", (ev) => {
 
   const alimentoId = ev.target.getAttribute("data-id");
   console.log(alimentoId);
+
   localStorage.setItem("alimento", alimentoId);
   window.location.href = "info.html"; //redirecciono a la página de info.html con el id del usuario en el local storage
 });
