@@ -52,7 +52,7 @@ function actualizarCarrito() {
 }
 
 // Función para manejar la suscripción
-function suscribirse(event) {
+/*function suscribirse(event) {
   event.preventDefault();
   const email = document.getElementById("email").value.trim();
   if (email) {
@@ -78,7 +78,7 @@ function suscribirse(event) {
       alert("Este correo electrónico ya está suscrito.");
     }
   }
-}
+}*/
 
 // Función para asignar eventos a los botones de agregar al carrito
 function asignarEventosAgregar() {
@@ -93,13 +93,13 @@ function asignarEventosAgregar() {
 }
 
 //Función para asignar evento al formulario de suscripción
-function asignarEventoSuscripcion() {
+/*function asignarEventoSuscripcion() {
   const formulario = document.getElementById("form-suscripcion");
   formulario.addEventListener("submit", suscribirse);
-}
+}*/
 
 // Función para manejar la búsqueda de productos
-function buscarProductos() {
+/*function buscarProductos() {
   const barraBusqueda = document
     .getElementById("barra-busqueda")
     .value.toLowerCase();
@@ -128,7 +128,7 @@ function asignarEventoBusqueda() {
       buscarProductos();
     }
   });
-}
+}*/
 
 // Función para manejar el checkout
 function manejarCheckout(event) {
