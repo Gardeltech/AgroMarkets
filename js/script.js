@@ -198,8 +198,8 @@ function handleCarritoChange() {
 document.addEventListener("DOMContentLoaded", function () {
   actualizarCarrito();
   asignarEventosAgregar();
-  asignarEventoSuscripcion();
-  asignarEventoBusqueda();
+  //asignarEventoSuscripcion();
+  //asignarEventoBusqueda();
   asignarEventoCheckout();
   //asignarEventosAdmin();
   handleCarritoChange();
