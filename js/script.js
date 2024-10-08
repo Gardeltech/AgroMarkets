@@ -284,9 +284,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+
   /*Productos se mostraran en pantalla  */
 
-  mostrarProductos(DatosAlimentos);
+  /*mostrarProductos(DatosAlimentos);
   console.log(mostrarProductos(DatosAlimentos));
 
   function mostrarProductos(productos) {
@@ -312,7 +313,7 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>`;
     });
     return listar;
-  }
+  }*/
 });
 
 //Al hacer click en la imagen se muestran los productos en info.html
