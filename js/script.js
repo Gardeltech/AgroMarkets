@@ -317,7 +317,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //Al hacer click en la imagen se muestran los productos en info.html
-const imgInfo = document.getElementById("imgInfo");
+/*const imgInfo = document.getElementById("imgInfo");
 console.log(imgInfo);
 
 imgInfo.addEventListener("click", (ev) => {
@@ -328,4 +328,4 @@ imgInfo.addEventListener("click", (ev) => {
 
   localStorage.setItem("alimento", alimentoId);
   window.location.href = "info.html"; //redirecciono a la página de info.html con el id del usuario en el local storage
-});
+});*/
