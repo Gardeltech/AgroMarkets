@@ -313,19 +313,19 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>`;
     });
     return listar;
-  }*/
+  }
+
+  //Al hacer click en la imagen se muestran los productos en info.html
+  const imgInfo = document.getElementById("imgInfo");
+  console.log(imgInfo);
+
+  imgInfo.addEventListener("click", (ev) => {
+    console.log(ev);
+
+    const alimentoId = ev.target.getAttribute("data-id");
+    console.log(alimentoId);
+
+    localStorage.setItem("alimento", alimentoId);
+    window.location.href = "info.html"; //redirecciono a la página de info.html con el id del usuario en el local storage
+  });*/
 });
-
-//Al hacer click en la imagen se muestran los productos en info.html
-/*const imgInfo = document.getElementById("imgInfo");
-console.log(imgInfo);
-
-imgInfo.addEventListener("click", (ev) => {
-  console.log(ev);
-
-  const alimentoId = ev.target.getAttribute("data-id");
-  console.log(alimentoId);
-
-  localStorage.setItem("alimento", alimentoId);
-  window.location.href = "info.html"; //redirecciono a la página de info.html con el id del usuario en el local storage
-});*/
