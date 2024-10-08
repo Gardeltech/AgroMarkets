@@ -299,27 +299,17 @@ document.addEventListener("DOMContentLoaded", function () {
  
           <div class="producto" 
           data-nombre="${producto.nombre}">
-            
-              <img src="${producto.imagen}" alt="${producto.nombre}" id="imgInfo" data-id="${producto.id}"/>
-        
-
-            <h3>${producto.nombre}</h3>
-            <p>€${producto.precio} / kg</p>
-            <button
-              class="boton-agregar"
-              data-producto="${producto.nombre}"
-              data-precio="${producto.precio}"
-              data-id=${producto.id}
-              
-              
-            >
-              Agregar al carrito
-            </button>
-          </div>
-
-          
-
-`;
+          <img src="${producto.imagen}" alt="${producto.nombre}" id="imgInfo" data-id="${producto.id}"/>
+          <h3>${producto.nombre}</h3>
+          <p>€${producto.precio} / kg</p>
+          <button
+          class="boton-agregar"
+          data-producto="${producto.nombre}"
+          data-precio="${producto.precio}"
+          data-id=${producto.id}>
+          Agregar al carrito
+          </button>
+          </div>`;
     });
     return listar;
   }
